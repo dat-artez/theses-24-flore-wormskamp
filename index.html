@@ -8,22 +8,30 @@
         body {
             font-family: Arial, Helvetica, sans-serif;
             margin: 20px;
+            height: 7900px; 
+            overflow-x: hidden; 
         }
 
         .container {
             max-width: 750px;
             margin: 0 auto;
+            position: relative;
+            z-index: 1;
         }
 
         .title {
             margin-left: auto;
             text-align: right;
+            z-index: 1;
+            position: relative;
         }
 
         .thesis-content {
             margin: 0 auto;
             max-width: 750px;
             line-height: 1.5;
+            z-index: 1;
+            position: relative;
         }
 
         .longQuote {
@@ -31,12 +39,27 @@
         }
 
         h1{
-
+            font-family: 'Courier New', Courier, monospace;
         }
 
         h2{
-            
+            font-family: 'Courier New', Courier, monospace;
         }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('P1030073.JPG'); /* Same background image */
+            background-size: cover;
+            background-position: center;
+            filter: blur(0); /* Initially not blurred */
+            z-index: 0; /* Behind content */
+            transition: filter 0.5s; /* Smooth transition */
+        }
+
     </style>
 
 </head>
@@ -67,6 +90,8 @@
                 This of course does not mean all nature should live busy, stressful and complex lives like humans do. But we could at least change our perspective and try to work together in some way. I believe that the natural world can blow us away with its beauty, intelligence and complexity if we just choose to see it.
             </p>
 
+            <br>
+
             <h2>Shared World, Diverse Realities</h2>
 
             <p> In his book Homo Deus: A Brief History of Tomorrow (2015) Israeli historian and futurologist Harari observes that when the moment comes to choose between economic growth and ecological stability, politicians, CEOs and voters almost always prefer economic growth.  This choice has resulted in the society that we currently live in, one where we continually keep repressing and controlling nature to facilitate our needs. But perhaps we should start reconnecting with nature on a more equal level. Harari agrees when he writes, “you cannot have a serious discussion about the nature and future of humankind without beginning with our fellow animals. Homo sapiens does its best to forget the fact, but it is an animal.”  Harari’s point is that we need to start living in a more balanced world. This will help us to be more sustainable and give us the opportunity to enjoy this planet for a long time to come.
@@ -85,6 +110,8 @@
                 </p>
                 The writers are corroborating on the idea that it is hard for any species to understand another. For me, and probably a lot of people, it is already hard to understand my own mind and behavior, and of course, that of fellow humans. So, it is not that strange that we have a hard time understanding other species.
             </p>
+
+            <br>
 
             <h2>Transcending Human</h2>
 
@@ -109,6 +136,8 @@
                 In his whole research there are a lot of failures and mistakes. But that doesn’t make it a bad project. As American writer and journalist Michael Pollan puts it in his book Botany of Desire: A Plant’s-Eye View of the World (2002): “Design in nature is but a concatenation of accidents, culled by natural selection until the result is so beautiful or effective as to seem a miracle of purpose.”  Pollan’s point is that mistakes have to be made to learn, and in the end, you may even need the mistakes to arrive at something beautiful. In nature, design is a product of failed attempts, and this is exactly what happens in this work. The mistakes made are maybe even more valuable than the result. And perhaps the most important part is that Thwaites is prepared to try, even though he doesn’t know what to do and it may not work out.
             </p>
 
+            <br>
+
             <h2>Shifting Perspectives</h2>
 
             <p> There are also more accessible ways to reconnect to nature. There is no need to dress up like a goat every time you want to feel closer to nature. One more accessible way is seen in the documentary My Octopus Teacher (2020) (Fig. 3 and Fig. 4), where South African documentary maker and naturalist Craig Foster establishes a special friendship with an octopus.
@@ -132,6 +161,8 @@
                 Harari suggests that one of the biggest projects on the human agenda will be finding the key to happiness.   In our current society happiness is being defined through consumption of goods and indirectly through exploitation of other beings and natural resources, rather than through genuine connection with our environment. The problem with this is that currently being happy is almost impossible. Every time you get to your goal something bigger and better becomes the new goal. There is this endless growth that never seems to stop. But perhaps we have already found the key, we just haven’t used it yet. Maybe the true key to happiness is letting yourself be changed by nature, allowing yourself to learn from them, just like Foster did. Stop having expectations and goals, and just let yourself be guided by your environment. Slow down and let nature amaze you.
             </p>
 
+            <br>
+
             <h2>Returning to the Soil</h2>
 
             <p> Until now I have only written about the human connection with animals but there are of course many more living beings in the more-than-human world, such as algae, plants, bacteria and fungi. The reason I have only talked about animals is because we are animals, which makes it a lot easier to connect with fellow animals, even though we do not speak the same language and may not always understand each other. When you interact with an animal you can read their behavior because it is close to ours, when you interact with algae, plants, bacteria or fungi this is completely different. With animals our actions most often result in immediate consequences. When interacting with algae, plant, bacteria or fungi it can take years until you notice the reaction. But this does not mean that making a connection is impossible. 
@@ -142,6 +173,8 @@
                 <br> <br>
                 You could even see being composted by mycelium as some kind of reincarnation. You become part of a much bigger system in death. As Sheldrake writes: “Without fungal webs no plant would exist anywhere. All life on land, including my own, depended on these networks.”  Essentially Sheldrake is saying that human bodies could become part of a system sustaining all life on earth. We could turn from being the polluters of the earth to becoming the sustainers of all life. Even in our death we would be able to continue connecting to natural world. Perhaps you could even finally understand what the trees are talking about. Or even feel what it is to be a tree.
             </p>
+
+            <br>
 
             <h2>Conclusion</h2>
 
@@ -154,7 +187,17 @@
                 Even though in our lifetime, we will probably never be able to fully get rid the line that we have created between the “human” and natural world. But I hope it will continue to fade.
             </p>
         </div>
+        <div class="overlay"></div>
     </div>
+
+    <script>
+       window.addEventListener('scroll', function() {
+            var scrollPosition = window.scrollY;
+            var maxScroll = document.body.scrollHeight - window.innerHeight;
+            var blurValue = 10 * ((maxScroll - scrollPosition) / maxScroll); // Adjust blur intensity
+            document.querySelector('.overlay').style.filter = 'blur(' + blurValue + 'px)';
+        });
+    </script>
 
 </body>
 </html>
