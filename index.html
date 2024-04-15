@@ -3,305 +3,456 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blurring Lines</title>
+    <title>Sticky Footnotes</title>
     <style>
-        @font-face {
-            font-family: TitleFont;
-            src: url(font_thesis.otf);
-        }
-        @font-face {
-            font-family: ItalicTextFont;
-            src: url(HelveticaNeue-LightItalic.ttf);
-        }
-         body {
-            font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;;
-            /* font-weight: lighter; */
-            height: 10500px; 
-            overflow-x: hidden;
-            margin: 0;
-        }
-        i {
-            font-family: ItalicTextFont;
-        }
-        .container {
-            position: relative;
-            width: 50%;
-            height: 100%;
-            margin: 0 auto;
-        }
-        .text {
-            font-size: 16px;
-            line-height: 1.6;
-            margin-right: 10%; 
-            position: relative; 
-            z-index: 1;
-        }
-        .footnote {
-            position: absolute;
-            right: -68%; /* Adjust as needed */
-            background-color: #FFFFFF;
-            padding: 10px;
-            font-size: 10px;
-            z-index: 1;
-            width: 55%;
-        }
-        sup {
-            font-size: 10px;
-        }
-        h1 {
-            text-align: right;
-            font-family: TitleFont;
-            font-size: 100px;
-            letter-spacing: 10px;
-            margin-bottom: -15px;
-        }
-        h1.subtitle {
-            text-align: right;
-            font-size: 20px;
-        }
-        h2{
-            font-family: TitleFont;
-            font-size: 20px;
-            letter-spacing: 10px;
+    
+    @font-face {
+        font-family: TitleFont;
+        src: url(font_thesis.otf);
+    }
 
+    @font-face {
+        font-family: ItalicTextFont;
+        src: url(HelveticaNeue-LightItalic.ttf);
+    }
+    
+    body {
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;;
+    }
+
+    i {
+        font-family: ItalicTextFont;
+    }
+
+    sup {
+        font-size: 10px;
+    }
+
+    h1 {
+        text-align: right;
+        font-family: TitleFont;
+        font-size: 100px;
+        letter-spacing: 10px;
+        margin-bottom: -15px;
+    }
+
+    h1.subtitle {
+        text-align: right;
+        font-size: 20px;
+    }
+
+    .subtitle{
+        margin-top: 5%;
+    }
+
+    h2{
+        font-family: TitleFont;
+        font-size: 20px;
+        letter-spacing: 10px;
+    }
+
+    .caption {
+        font-size: 10px;
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('lines2-02.jpg'); 
+        background-size: cover;
+        background-position: center;
+        filter: blur(1px); 
+        z-index: -1; 
+        transition: filter 0.5s; 
+    }
+    
+.wrapper1 {
+        display: flex;
+        z-index: 1;
+
+        .left {
+        width: 65%;
         }
-       
-        .caption {
-            font-size: 10px;
+
+        .right {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px;
+        font-size: 10px;
+
+        .right-inner {
+        position: sticky;
+        top: 0;
+        padding: 20px;
+    }
+  }
+}
+
+.wrapper2 {
+        display: flex;
+        z-index: 1;
+
+        .left {
+        width: 65%;
         }
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('lines.jpg'); 
-            background-size: cover;
-            background-position: center;
-            filter: blur(1px); 
-            z-index: 0; 
-            transition: filter 0.5s; 
+
+        .right {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px;
+        font-size: 10px;
+
+        .right-inner {
+        position: sticky;
+        top: 0;
+        padding: 20px;
+    }
+  }
+}
+
+.wrapper3 {
+        display: flex;
+        z-index: 1;
+
+        .left {
+        width: 65%;
         }
+
+        .right {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px;
+        font-size: 10px;
+
+        .right-inner {
+        position: sticky;
+        top: 0;
+        padding: 20px;
+    }
+  }
+}
+
+.wrapper4 {
+        display: flex;
+        z-index: 1;
+
+        .left {
+        width: 65%;
+        }
+
+        .right {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px;
+        font-size: 10px;
+
+        .right-inner {
+        position: sticky;
+        top: 0;
+        padding: 20px;
+    }
+  }
+}
+
+.wrapper5 {
+        display: flex;
+        z-index: 1;
+
+        .left {
+        width: 65%;
+        }
+
+        .right {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px;
+        font-size: 10px;
+
+        .right-inner {
+        position: sticky;
+        top: 0;
+        padding: 20px;
+    }
+  }
+}
+
+.wrapper6 {
+        display: flex;
+        z-index: 1;
+
+        .left {
+        width: 65%;
+        }
+
+        .right {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px;
+        font-size: 10px;
+
+        .right-inner {
+        position: sticky;
+        top: 0;
+        padding: 20px;
+    }
+  }
+}
+
+.container {
+    margin-left: 25%;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+
+    font-size: 16px;
+    line-height: 1.6;
+
+  .header {
+    padding: 20px 20px;
+    text-align: right;
+    z-index: 1;
+    margin-right: 35%;
+  }
+}
     </style>
 </head>
 <body>
-
-<div class="container">
-    <div class="text" id="text">
-
-        <h1>Blurring Lines </h1>
-        <h1 class="subtitle">Redefining the Human Perspective on the Natural World</h1>  
-        <br><br>
-
-        <p> 
-            Flore Hanna Wormskamp
-            <br><br>
-            Human life that we know now first arose from the oceans. Humans, just like all other species, started off as small single-celled organisms roaming the floor of the ocean, the exact place where a lot of more-than-human species still live. We evolved further on land while others continued evolving in the ocean and even in the sky. But due to the creation of agriculture our perspective towards our fellow organisms changed. It seems that we have forgotten that other species have evolved with us, that we are not the only ones who are the result of millions of years of careful evolution. Some of us even seem to have forgotten that other more-than-human life forms are capable of doing amazing things that humans can only dream of, such as regrowing limbs or changing color.
-            <br> <br>
-            Even though we live in big social groups, you could see humans as an extremely asocial species. This is because of something that we call human exceptionalism, where we view humans as different from all other organisms, and we believe that all our problems can be solved by human creativity and technology. We have created an illusion where we believe that we can’t accept help from more-than-human species, making our lives unnecessarily hard. Imagine what we could accomplish when we try to socialize with other species and work together with nature, with all the animals, plants, algae, fungi and bacteria living on this earth? 
-            <br> <br>
-            Working in partnership with nature will not only be beneficial for humans but also for all other species on earth. In his <i>book Other Minds: The Octopus and the Evolution of Intelligent Life</i> (2017) Australian philosopher of science and writer Peter Godfrey-Smith emphasizes that if one kind of organism evolves a little, it changes the environment for other organisms, which evolve in response.<sup>1</sup> But there is only so much nature can respond to, there is only a certain amount species can evolve. In this current time humans are changing the environment way too fast for everyone – even humans – to catch up. If we continue like this, there is no way the earth will be able to survive.    
-            <br> <br>
-            How can humans and nature work together in a more symbiotic way, blurring the line between the “human” and natural world? What does this “true” partnership mean for the way we could live in the future? Maybe we can decide the fate of the earth together instead of humans being the dictator of this world. No species should be able to change the course of all life on earth on their own. It is important to involve every (living) being on this earth in some way. As American feminist and philosopher of science Donna Haraway writes in her book <i>Staying with the Trouble: Making Kin in the Chthulucene</i> (2016): 
-            <blockquote>
-            It matters what matters we use to think other matters with; It matters what stories we tell to tell other stories with; It matters what knots knot knots, what thoughts think thoughts, what descriptions describe descriptions, what ties tie ties. It matters what stories make worlds; what worlds make stories.<sup>2</sup>
-            </blockquote>
-            The meaning of Haraway’s note is that it matters who decides the fate of the earth. If the fate of the earth is decided by humans only, it completely excludes all more-than-human beings, which ultimately will create a disbalance that will hurt everyone.
-            <br> <br>
-            This of course does not mean all nature should live busy, stressful and complex lives like humans do. But we could at least change our perspective and try to work together in some way. I believe that the natural world can blow us away with its beauty, intelligence and complexity if we just choose to see it.
-        </p>
-       
-        <div class="footnote" id="footnote">
-            1. Peter Godfrey-Smith, <i>Other Minds</i> (London: William Collins, 2017), 34.
-            <br>
-            2. Donna Haraway, <i>Staying with the Trouble</i> (Durham: Duke University Press, 2016), 12.
-         </div>
-       
-
-        <p>
-            <br>
-            <h2>Shared World, Diverse Realities</h2>
+    <div class="container">
+        <div class="header">
+          <h1>Blurring lines</h1>
+          <h1 class="subtitle">Redefining the Human Perspective on the Natural World</h1> 
+          <br>
+          <p>Flore Hanna Wormskamp</p>
+        </div>
+        <div class="wrapper1">
+          <div class="left">
+            <p>
+                Human life that we know now first arose from the oceans. Humans, just like all other species, started off as small single-celled organisms roaming the floor of the ocean, the exact place where a lot of more-than-human species still live. We evolved further on land while others continued evolving in the ocean and even in the sky. But due to the creation of agriculture our perspective towards our fellow organisms changed. It seems that we have forgotten that other species have evolved with us, that we are not the only ones who are the result of millions of years of careful evolution. Some of us even seem to have forgotten that other more-than-human life forms are capable of doing amazing things that humans can only dream of, such as regrowing limbs or changing color.
+                <br> <br>
+                Even though we live in big social groups, you could see humans as an extremely asocial species. This is because of something that we call human exceptionalism, where we view humans as different from all other organisms, and we believe that all our problems can be solved by human creativity and technology. We have created an illusion where we believe that we can’t accept help from more-than-human species, making our lives unnecessarily hard. Imagine what we could accomplish when we try to socialize with other species and work together with nature, with all the animals, plants, algae, fungi and bacteria living on this earth? 
+                <br> <br>
+                Working in partnership with nature will not only be beneficial for humans but also for all other species on earth. In his book <i>Other Minds: The Octopus and the Evolution of Intelligent Life</i> (2017) Australian philosopher of science and writer Peter Godfrey-Smith emphasizes that if one kind of organism evolves a little, it changes the environment for other organisms, which evolve in response.<sup>1</sup> But there is only so much nature can respond to, there is only a certain amount species can evolve. In this current time humans are changing the environment way too fast for everyone – even humans – to catch up. If we continue like this, there is no way the earth will be able to survive.    
+                <br> <br>
+                How can humans and nature work together in a more symbiotic way, blurring the line between the “human” and natural world? What does this “true” partnership mean for the way we could live in the future? Maybe we can decide the fate of the earth together instead of humans being the dictator of this world. No species should be able to change the course of all life on earth on their own. It is important to involve every (living) being on this earth in some way. As American feminist and philosopher of science Donna Haraway writes in her book <i>Staying with the Trouble: Making Kin in the Chthulucene</i> (2016): 
+                <blockquote>
+                It matters what matters we use to think other matters with; It matters what stories we tell to tell other stories with; It matters what knots knot knots, what thoughts think thoughts, what descriptions describe descriptions, what ties tie ties. It matters what stories make worlds; what worlds make stories.<sup>2</sup>
+                </blockquote>
+                The meaning of Haraway’s note is that it matters who decides the fate of the earth. If the fate of the earth is decided by humans only, it completely excludes all more-than-human beings, which ultimately will create a disbalance that will hurt everyone.
+                <br> <br>
+                This of course does not mean all nature should live busy, stressful and complex lives like humans do. But we could at least change our perspective and try to work together in some way. I believe that the natural world can blow us away with its beauty, intelligence and complexity if we just choose to see it.
+                <br><br>
+            </p>
+        </div>
+          <dif class="right">
+            <div class="right-inner">
+                1. Peter Godfrey-Smith, <i>Other Minds</i> (London: William Collins, 2017), 34.
+                <br>
+                2. Donna Haraway, <i>Staying with the Trouble</i> (Durham: Duke University Press, 2016), 12.     
+            </div>       
+          </dif>
+        </div>
+        <div class="wrapper2">
+            <div class="left">
+            <p>
+                <h2>Shared World, Diverse Realities</h2>
+                
+                In his book <i>Homo Deus: A Brief History of Tomorrow</i> (2015) Israeli historian and futurologist Harari observes that when the moment comes to choose between economic growth and ecological stability, politicians, CEOs and voters almost always prefer economic growth.<sup>3</sup> This choice has resulted in the society that we currently live in, one where we continually keep repressing and controlling nature to facilitate our needs. But perhaps we should start reconnecting with nature on a more equal level. Harari agrees when he writes, “you cannot have a serious discussion about the nature and future of humankind without beginning with our fellow animals. Homo sapiens does its best to forget the fact, but it is an animal.”<sup>4</sup> Harari’s point is that we need to start living in a more balanced world. This will help us to be more sustainable and give us the opportunity to enjoy this planet for a long time to come.
+                <br> <br>
+                Taking the first step to living in a more equal world is not as hard as you probably think it is. It begins with recognizing that everything evolves around symbiosis, and nothing can exist without it. In their book <i>Ways of Being: Beyond Human Intelligence</i> (2022) British artist and writer James Bridle writes: “Symbiosis is crucial to our daily lives. The human microbiome, the two kilograms or so of bacteria and other organisms that we carry around with us — mostly in our gut — profoundly influences our awareness and behavior.”<sup>5</sup> Bridle’s point is that even our bodies are one big symbiotic system. We do not exist as a separate individual entity. Once you realize that, you are already one step closer to living in a shared world.
+                <br> <br>
+                You could say that we already live in a shared world, but we just don’t see it. It is not a matter of changing the world but rather of changing our perception of and position in this ecosystem. Once we change that everything else will follow. Bridle also noted: 
+                <blockquote>
+                This shared world is not flat, nor singular. Many worlds — lively, noisy worlds — exist many don’t include us at all. Experiments with plants hearing suggest that, unsurprisingly, in many of those worlds the footsteps of caterpillars matter more than classical music or human language. It is a beautiful illustration of the kind of decentering of ourselves and of human experience at which we must become adept in order to live better and more responsibly in a more-than-human world.<sup>6</sup>  
+                </blockquote>
+                The core of Bridle’s argument is that we need to decentralize ourselves and change our perspective. So why is it so hard for humans to simply shift their perspective?
+                <br> <br>
+                As Puerto Rican artists Allora & Calzadilla and American science fiction writer Ted Chiang put it in their essay “The Great Silence” (2015), where they discover the human world from the perspective of a parrot: 
+                <blockquote>
+                Humans have lived alongside parrots for thousands of years, and only recently have they considered the possibility that we might be intelligent. I suppose I can’t blame them. We parrots used to think humans weren’t very bright. It’s hard to make sense of behavior that’s so different from your own.<sup>7</sup>
+                </blockquote>
+                The writers are corroborating on the idea that it is hard for any species to understand another. For me, and probably a lot of people, it is already hard to understand my own mind and behavior, and of course, that of fellow humans. So, it is not that strange that we have a hard time understanding other species.
+                <br><br>
+            </p>
+            </div>
+            <dif class="right">
+              <div class="right-inner">
+                3. Yuval Noah Harari, <i>Homo Deus</i> (London: Vintage, 2017), 23.
+                <br>
+                4. Harari, <i>Homo Deus</i>, 76.
+                <br>
+                5. James Bridle, <i>Ways of Being</i> (London: Pinguin Random House UK, 2022), 108.
+                <br>
+                6. Bridle, <i>Ways of Being</i>, 68.   
+                <br>
+                7. Allora & Calzadilla and Ted Chiang, “The Great Silence”, <i>e-flux journal SUPERCOMMUNITY</i>, #65 (may-august 2015), 2.   
+              </div>       
+            </dif>
+        </div>
+        <div class="wrapper3">
+            <div class="left">
+            <p>
+                <h2>Transcending Human</h2>
             
-            In his book <i>Homo Deus: A Brief History of Tomorrow</i> (2015) Israeli historian and futurologist Harari observes that when the moment comes to choose between economic growth and ecological stability, politicians, CEOs and voters almost always prefer economic growth.<sup>3</sup> This choice has resulted in the society that we currently live in, one where we continually keep repressing and controlling nature to facilitate our needs. But perhaps we should start reconnecting with nature on a more equal level. Harari agrees when he writes, “you cannot have a serious discussion about the nature and future of humankind without beginning with our fellow animals. Homo sapiens does its best to forget the fact, but it is an animal.”<sup>4</sup> Harari’s point is that we need to start living in a more balanced world. This will help us to be more sustainable and give us the opportunity to enjoy this planet for a long time to come.
-            <br> <br>
-            Taking the first step to living in a more equal world is not as hard as you probably think it is. It begins with recognizing that everything evolves around symbiosis, and nothing can exist without it. In their book <i>Ways of Being: Beyond Human Intelligence</i> (2022) British artist and writer James Bridle writes: “Symbiosis is crucial to our daily lives. The human microbiome, the two kilograms or so of bacteria and other organisms that we carry around with us — mostly in our gut — profoundly influences our awareness and behavior.”<sup>5</sup> Bridle’s point is that even our bodies are one big symbiotic system. We do not exist as a separate individual entity. Once you realize that, you are already one step closer to living in a shared world.
-            <br> <br>
-            You could say that we already live in a shared world, but we just don’t see it. It is not a matter of changing the world but rather of changing our perception of and position in this ecosystem. Once we change that everything else will follow. Bridle also noted: 
-            <blockquote>
-            This shared world is not flat, nor singular. Many worlds — lively, noisy worlds — exist many don’t include us at all. Experiments with plants hearing suggest that, unsurprisingly, in many of those worlds the footsteps of caterpillars matter more than classical music or human language. It is a beautiful illustration of the kind of decentering of ourselves and of human experience at which we must become adept in order to live better and more responsibly in a more-than-human world.<sup>6</sup>  
-            </blockquote>
-            The core of Bridle’s argument is that we need to decentralize ourselves and change our perspective. So why is it so hard for humans to simply shift their perspective?
-            <br> <br>
-            As Puerto Rican artists Allora & Calzadilla and American science fiction writer Ted Chiang put it in their essay “The Great Silence” (2015), where they discover the human world from the perspective of a parrot: 
-            <blockquote>
-            Humans have lived alongside parrots for thousands of years, and only recently have they considered the possibility that we might be intelligent. I suppose I can’t blame them. We parrots used to think humans weren’t very bright. It’s hard to make sense of behavior that’s so different from your own.<sup>7</sup>
-            </blockquote>
-            The writers are corroborating on the idea that it is hard for any species to understand another. For me, and probably a lot of people, it is already hard to understand my own mind and behavior, and of course, that of fellow humans. So, it is not that strange that we have a hard time understanding other species.
-        </p>
-
-        <div class="footnote" id="footnote"> 
-            <br><br><br>
-            3. Yuval Noah Harari, <i>Homo Deus</i> (London: Vintage, 2017), 23.
-            <br>
-            4. Harari, <i>Homo Deus</i>, 76.
-            <br>
-            5. James Bridle, <i>Ways of Being</i> (London: Pinguin Random House UK, 2022), 108.
-            <br>
-            6. Bridle, <i>Ways of Being</i>, 68.   
-            <br>
-            7. Allora & Calzadilla and Ted Chiang, “The Great Silence”, <i>e-flux journal SUPERCOMMUNITY</i>, #65 (may-august 2015), 2.
+                One example that tries to create an understanding between human and animal species is the design research project <i>GoatMan</i> (2016) by British designer and writer Thomas Thwaites. The work consists of prosthetics to give Thwaites the ability to walk on all fours, an artificial bowel so he can eat real grass, a research book containing pictures of his research and performance, and a text where he explains the full process of his project.
+                <br> <br>
+                In this work Thwaites aspires to become a goat to escape the worry and existential pain of being human.<sup>8</sup> By researching every aspect of a goat – not only its body but also the soul and mind – he aspires to become a goat in every sense of its being. The ultimate goal of this work is not to look exactly like a goat but rather to answer the question of whether life can be more fulfilling if you are a goat instead of a human.
+                <br> <br>
+    
+                    <img src="fig1.jpg" height="260">
+                    <img src="fig2.png" height="260">
+                    <a class="caption"> Fig.2: Thomas Thwaites, <i>GoatMan</i>, 2016.&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Fig.2: Thomas Thwaites, <i>GoatMan</i>, 2016.</a>
+            
+                <br> <br>
+                By looking at this work (Fig. 1 and Fig. 2) it is immediately clear that Thwaites doesn’t belong in the herd. Maybe if you stand very far away and squint your eyes the designer can be mistaken for a goat. But otherwise, he simply looks just like a human wearing some prosthetics. You can ask yourself if looking like a goat is that important in order to feel what it is like to be a goat, after all, you cannot really see yourself. All we can see is the documentation of the project. In a way, this work is perhaps more performance art, but one which must be experienced as a performer instead of as an audience.
+                <br> <br>
+                So why go through the trouble of walking on all fours? You could also experience the life of a goat by just sitting among them, right? As Bridle puts it: “In order to change ourselves, to take on different ways of thinking about the world, we need new ways of seeing it.”<sup>9</sup>  In other words, Bridle believes that we should shift our perspective, in order to be able to change our current behavior. In the case of Thwaites, he does this by walking, eating and living like a goat to create a new way of seeing the world. This can be one of the first steps in understanding other species – or at least goats – and a starting point for creating a more symbiotic relationship with our environment.
+                <br> <br>
+                Bridle suggest that we are normally held back by the limits of our own thinking controlled by logbooks and measuring devices.<sup>10</sup> In making this comment, Bridle again emphasizes that we need a new way of seeing in order not be held back by our limitations. In this work Thwaites experiences the world in a very organic way. This gives us the opportunity to connect with nature on a very equal level, instead of from this pedestal we tend to place ourselves on.
+                <br> <br>
+                But it is not only physically becoming a goat that makes this project interesting. Thwaites also wanted to mentally become a goat. During his research he learned that humans have always tried to bridge the gap between humans and more-than-humans. As Thwaites puts it in his book <i>GoatMan: How I Took a Holiday from Being Human </i>(2016): “So really, to want to become a goat is pretty standard. In fact, historically speaking, it’s almost odder to not want to become a goat.”<sup>11</sup> In making this statement, Thwaites argues that wanting to become a more-than-human species is something that is inherently human. But if we have been trying to become more-than-human for so long, why have we never fully succeeded? Maybe it is the limitations of our own minds.
+                <br> <br>
+                The only minds we can truly understand are our own, and sometimes that is not even the case. Yet Thwaites still tried to acquire the mind of a goat. But is that even possible? In his research into what the goat mind could be he remains quite superficial, although he goes to great lengths to actually be able to think like a goat. He describes the goat mind as a version of the human brain just without the function of inner speech. In his eyes he would then be able to think like a goat because if you don’t have inner speech, you can’t form memories and if you don't have memories, you can’t worry.<sup>12</sup> 
+                <br> <br>
+                But how can he know that goats don’t have inner speech? Maybe they don’t speak our language but that doesn't mean they have no inner speech at all. Godfrey-Smith observed something similar when he writes: “When we imagine lives and experiences of simpler animals, we often wind-up visualizing scaled-down versions of ourselves.”<sup>13</sup> Essentially, he is saying that Thwaites made a classic mistake – one that most humans make – of seeing other species as a lesser version of a human. Not having inner speech should also not mean that you can’t form memories. Godfrey-Smith agrees when he writes, “language is an important tool for thought, and inner speech is not mere mental-acoustic froth. But it is not essential to the organization of ideas, and language is not the medium of complex thought.”<sup>14</sup> In other words, this means that if something doesn’t function the same as a human brain (if we even would know how a human brain works), it doesn’t mean it can't function at all.
+                <br> <br>
+                And if you have mentally become a goat, how do you know? You don’t know what it feels like to be a goat. How would you then be able to compare the difference between human life and that of a goat? Could you forget that you are human and stay in this hybrid form forever? And if you forget that you are human, will you start to worry like a goat? Would that then not defy the whole purpose of this project?
+                <br> <br>
+                In his whole research there are a lot of failures and mistakes. But that doesn’t make it a bad project. As American writer and journalist Michael Pollan puts it in his book <i>Botany of Desire: A Plant’s-Eye View of the World</i> (2002): “Design in nature is but a concatenation of accidents, culled by natural selection until the result is so beautiful or effective as to seem a miracle of purpose.”<sup>15</sup> Pollan’s point is that mistakes have to be made to learn, and in the end, you may even need the mistakes to arrive at something beautiful. In nature, design is a product of failed attempts, and this is exactly what happens in this work. The mistakes made are maybe even more valuable than the result. And perhaps the most important part is that Thwaites is prepared to try, even though he doesn’t know what to do and it may not work out.      
+                <br><br>
+            </p>
+            </div>
+            <dif class="right">
+                <div class="right-inner">
+                    8. Thomas Thwaites, <i>GoatMan</i> (New York: Princeton Architectural Press, 2016), 24.
+                    <br>
+                    9. Bridle, <i>Ways of Being</i>, 125.
+                    <br>
+                    10. Bridle, <i>Ways of Being</i>, 101.
+                    <br>
+                    11. Thwaites, <i>GoatMan</i>, 38.  
+                    <br>
+                    12. Thwaites, <i>GoatMan</i>, 50-85. 
+                    <br>
+                    13. Godfrey-Smith, <i>Other Minds</i>, 10.
+                    <br>
+                    14. Godfrey-Smith, <i>Other Minds</i>, 143.
+                    <br>
+                    15. Michael Pollan, <i>Botany of Desire</i> (New York: Random House, 2002), XIX.      
+                </div>       
+            </dif>
         </div>
-
-        <p>
-            <br>
-            <h2>Transcending Human</h2>
+        <div class="wrapper4">
+            <div class="left">
+            <p>
+                <h2>Shifting Perspectives</h2>
+            
+                There are also more accessible ways to reconnect to nature. There is no need to dress up like a goat every time you want to feel closer to nature. One more accessible way is seen in the documentary<i> My Octopus Teacher </i>(2020) (Fig. 3 and Fig. 4), where South African documentary maker and naturalist Craig Foster establishes a special friendship with an octopus.
+                <br> <br>
+    
+                    <img src="fig3.jpg" height="225">
+                    <img src="fig4.jpg" height="225">
+                    <a class="caption"> Fig.3: Craig Foster, <i>My Octopus Teacher</i>, 2020.&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Fig.4: Craig Foster, <i>My Octopus Teacher</i>, 2020.</a>
         
-            One example that tries to create an understanding between human and animal species is the design research project <i>GoatMan</i> (2016) by British designer and writer Thomas Thwaites. The work consists of prosthetics to give Thwaites the ability to walk on all fours, an artificial bowel so he can eat real grass, a research book containing pictures of his research and performance, and a text where he explains the full process of his project.
-            <br> <br>
-            In this work Thwaites aspires to become a goat to escape the worry and existential pain of being human.<sup>8</sup> By researching every aspect of a goat – not only its body but also the soul and mind – he aspires to become a goat in every sense of its being. The ultimate goal of this work is not to look exactly like a goat but rather to answer the question of whether life can be more fulfilling if you are a goat instead of a human.
-            <br> <br>
-
-                <img src="fig1.jpg" height="260">
-                <img src="fig2.png" height="260">
-                <a class="caption"> Fig.2: Thomas Thwaites, <i>GoatMan</i>, 2016.&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Fig.2: Thomas Thwaites, <i>GoatMan</i>, 2016.</a>
-      
-            <br> <br>
-            By looking at this work (Fig. 1 and Fig. 2) it is immediately clear that Thwaites doesn’t belong in the herd. Maybe if you stand very far away and squint your eyes the designer can be mistaken for a goat. But otherwise, he simply looks just like a human wearing some prosthetics. You can ask yourself if looking like a goat is that important in order to feel what it is like to be a goat, after all, you cannot really see yourself. All we can see is the documentation of the project. In a way, this work is perhaps more performance art, but one which must be experienced as a performer instead of as an audience.
-            <br> <br>
-            So why go through the trouble of walking on all fours? You could also experience the life of a goat by just sitting among them, right? As Bridle puts it: “In order to change ourselves, to take on different ways of thinking about the world, we need new ways of seeing it.”<sup>9</sup>  In other words, Bridle believes that we should shift our perspective, in order to be able to change our current behavior. In the case of Thwaites, he does this by walking, eating and living like a goat to create a new way of seeing the world. This can be one of the first steps in understanding other species – or at least goats – and a starting point for creating a more symbiotic relationship with our environment.
-            <br> <br>
-            Bridle suggest that we are normally held back by the limits of our own thinking controlled by logbooks and measuring devices.<sup>10</sup> In making this comment, Bridle again emphasizes that we need a new way of seeing in order not be held back by our limitations. In this work Thwaites experiences the world in a very organic way. This gives us the opportunity to connect with nature on a very equal level, instead of from this pedestal we tend to place ourselves on.
-            <br> <br>
-            But it is not only physically becoming a goat that makes this project interesting. Thwaites also wanted to mentally become a goat. During his research he learned that humans have always tried to bridge the gap between humans and more-than-humans. As Thwaites puts it in his book <i>GoatMan: How I Took a Holiday from Being Human </i>(2016): “So really, to want to become a goat is pretty standard. In fact, historically speaking, it’s almost odder to not want to become a goat.”<sup>11</sup> In making this statement, Thwaites argues that wanting to become a more-than-human species is something that is inherently human. But if we have been trying to become more-than-human for so long, why have we never fully succeeded? Maybe it is the limitations of our own minds.
-            <br> <br>
-            The only minds we can truly understand are our own, and sometimes that is not even the case. Yet Thwaites still tried to acquire the mind of a goat. But is that even possible? In his research into what the goat mind could be he remains quite superficial, although he goes to great lengths to actually be able to think like a goat. He describes the goat mind as a version of the human brain just without the function of inner speech. In his eyes he would then be able to think like a goat because if you don’t have inner speech, you can’t form memories and if you don't have memories, you can’t worry.<sup>12</sup> 
-            <br> <br>
-            But how can he know that goats don’t have inner speech? Maybe they don’t speak our language but that doesn't mean they have no inner speech at all. Godfrey-Smith observed something similar when he writes: “When we imagine lives and experiences of simpler animals, we often wind-up visualizing scaled-down versions of ourselves.”<sup>13</sup> Essentially, he is saying that Thwaites made a classic mistake – one that most humans make – of seeing other species as a lesser version of a human. Not having inner speech should also not mean that you can’t form memories. Godfrey-Smith agrees when he writes, “language is an important tool for thought, and inner speech is not mere mental-acoustic froth. But it is not essential to the organization of ideas, and language is not the medium of complex thought.”<sup>14</sup> In other words, this means that if something doesn’t function the same as a human brain (if we even would know how a human brain works), it doesn’t mean it can't function at all.
-            <br> <br>
-            And if you have mentally become a goat, how do you know? You don’t know what it feels like to be a goat. How would you then be able to compare the difference between human life and that of a goat? Could you forget that you are human and stay in this hybrid form forever? And if you forget that you are human, will you start to worry like a goat? Would that then not defy the whole purpose of this project?
-            <br> <br>
-            In his whole research there are a lot of failures and mistakes. But that doesn’t make it a bad project. As American writer and journalist Michael Pollan puts it in his book <i>Botany of Desire: A Plant’s-Eye View of the World</i> (2002): “Design in nature is but a concatenation of accidents, culled by natural selection until the result is so beautiful or effective as to seem a miracle of purpose.”<sup>15</sup> Pollan’s point is that mistakes have to be made to learn, and in the end, you may even need the mistakes to arrive at something beautiful. In nature, design is a product of failed attempts, and this is exactly what happens in this work. The mistakes made are maybe even more valuable than the result. And perhaps the most important part is that Thwaites is prepared to try, even though he doesn’t know what to do and it may not work out.      
-        </p>
-
-        <div class="footnote" id="footnote"></div>
-        <div class="footnote" id="footnote"> 
-            <br><br><br>
-            8. Thomas Thwaites, <i>GoatMan</i> (New York: Princeton Architectural Press, 2016), 24.
-            <br>
-            9. Bridle, <i>Ways of Being</i>, 125.
-            <br>
-            10. Bridle, <i>Ways of Being</i>, 101.
-            <br>
-            11. Thwaites, <i>GoatMan</i>, 38.  
-            <br>
-            12. Thwaites, <i>GoatMan</i>, 50-85. 
-            <br>
-            13. Godfrey-Smith, <i>Other Minds</i>, 10.
-            <br>
-            14. Godfrey-Smith, <i>Other Minds</i>, 143.
-            <br>
-            15. Michael Pollan, <i>Botany of Desire</i> (New York: Random House, 2002), XIX.
+                 <br> <br>
+                In order to regain his connection to nature, which Foster had lost some time ago, he decides to go free diving every day and document his experience. After some time, he catches a glimpse of this beautiful and mesmerizing octopus. This is when he starts to visit her every day, just out of curiosity.
+                <br> <br>
+                The way he approaches these visits/encounters is something we can learn from. Foster dives without a wetsuit. This is because he believes that you can only get close to the environment when you have no barrier to your surroundings. In this case he means it in a literal sense, but it could mean so much more. When you open yourself up to all possibilities and lose your barrier, that is where communication can start to happen. As Godfrey-Smith phrased it: “Communication is a matter of sending and receiving, speaking and hearing, producing and interpreting — two complementary roles.”<sup>16</sup> This quote implies that communication is not only sending out information but that you also need to listen. Humans have created so many of these barriers – for example through smartphones or headphones and even houses – that we have literally locked ourselves out from the conversation and stopped listening.
+                <br> <br>
+                In order to reenter the conversation, we not only need to get rid of our barrier, but we also need to understand that human language is not the only form of communication. Bridle writes, “in imagining better ways of living with non-humans, computational or biological, we must be attentive to their own ways of speaking and making meaning, and not simply insist that they learn to speak, and think, and behave, in the ways we do.”<sup>17</sup> Essentially, Bridle is saying that humans need to shift their perspective, in order to understand other beings. Perhaps we should learn how to dance like a bee, talk like a whale or sense like a bat.
+                <br> <br>
+                Throughout the documentary Foster tends to assign human emotions and qualities to the octopus. This anthropomorphic view is something that most scientists tend to avoid because it is seen as bad science. As Harari observes in his book Homo Deus: “We shouldn’t humanize animals needlessly, imagine that they are just a furrier version of ourselves. This is not only bad science, but it also prevents us from understanding and valuing other animals on their terms.”<sup>18</sup> Harari is elaborating on the idea that when you give human emotions to more-than-human species you are filling in their world for them, you assign them feelings that they may not have. But could assigning emotions to more-than-human species not also help us?
+                <br> <br>
+                In his book <i>Earth Emotions: New Words for a New World </i>(2019) Australian philosopher and environmental activist Glenn Albrecht claims that in order for humans to feel connected to their family or friends we need to be able to express our positive emotions such as love, care, empathy, admiration and happiness.<sup>19</sup> Does this then also apply to our connection with nature? Do we need some kind of way to express our positive emotions towards them? Maybe new bonds can be formed through emotion. Maybe we should all form an emotional connection to an animal just like Foster did with the octopus.
+                <br> <br>
+                But creating an emotional relationship with something that is unable to return the favor of expressing their emotions, in a way understandable for humans, very quickly becomes unsatisfactory. Foster does create a satisfactory and ultimately meaningful bond with this octopus by assigning human emotions to her. He creates a feeling of returned affection which boosts their relationship. As British biologist and writer Merlin Sheldrake puts it in the book <i>Entangled Life: How Fungi Make our World, Change our Minds, and Shape our Futures</i> (2020): “Scientists are — and have always been — emotional, creative, intuitive, whole human beings, asking questions about a world that was never made to be catalogued and systematized.”<sup>20</sup> Sheldrakes point is that scientists need emotion and creativity in order to try to make sense of the world. So why would science keep all these emotions out? As Albrecht puts it: “Earth emotions are what make us human-in-nature.”<sup>21</sup>
+                <br> <br>
+                Connection to nature is not only about understanding nature but it can also help us understand ourselves. Nature can teach us more about our lives than you may expect and that we even know now. In<i> My Octopus Teacher</i> Foster shows us multiple accounts where he learnt something from the octopus that changed his being:
+                <blockquote>
+                She'd made me realize just how precious wild places are. You go into that water and it's extremely liberating. All your worries and problems and life drama just dissolve. You slowly start to care about all the animals, even the tiniest little animals. You realize that everyone is very important. To sense how vulnerable these wild animals' lives are, and actually, then how vulnerable all our lives on this planet are. My relationship with the sea forest and its creatures deepens week after month after year after year. You're in touch with this wild place, and it's speaking to you its language is visible. I fell in love with her but also with that amazing wildness that she represented and how that changed me. What she taught me was to feel that you’re part of this place, not a visitor. That's a huge difference.<sup>22</sup>
+                </blockquote>
+                Harari suggests that one of the biggest projects on the human agenda will be finding the key to happiness.<sup>23</sup> In our current society happiness is being defined through consumption of goods and indirectly through exploitation of other beings and natural resources, rather than through genuine connection with our environment. The problem with this is that currently being happy is almost impossible. Every time you get to your goal something bigger and better becomes the new goal. There is this endless growth that never seems to stop. But perhaps we have already found the key, we just haven’t used it yet. Maybe the true key to happiness is letting yourself be changed by nature, allowing yourself to learn from them, just like Foster did. Stop having expectations and goals, and just let yourself be guided by your environment. Slow down and let nature amaze you.
+                <br><br>
+            </p>
+            </div>
+            <dif class="right">
+              <div class="right-inner">
+                16. Godfrey-Smith, <i>Other Minds</i>, 131.
+                <br>
+                17. Bridle, <i>Ways of Being</i>, 169.
+                <br>
+                18. Harari, <i>Homo Deus</i>, 150.
+                <br>
+                19. Glenn A. Albrecht, <i>Earth Emotions</i> (New York: Cornell University Press, 2019), 3. 
+                <br>
+                20. Merlin Sheldrake, <i>Entangled Life</i> (New York: Random House, 2020), 22. 
+                <br>
+                21. Albrecht, <i>Earth Emotions</i>, 4.
+                <br>
+                22. <i>My Octopus Teacher</i>, directed by James Reed and Pippa Ehrlich (2020; Netflix Original, 2020).
+                <br>
+                23. Harari, <i>Homo Deus</i>, 34.      
+              </div>       
+            </dif>
         </div>
-       
-        <p>
-            <br>
-            <h2>Shifting Perspectives</h2>
-        
-            There are also more accessible ways to reconnect to nature. There is no need to dress up like a goat every time you want to feel closer to nature. One more accessible way is seen in the documentary<i> My Octopus Teacher </i>(2020) (Fig. 3 and Fig. 4), where South African documentary maker and naturalist Craig Foster establishes a special friendship with an octopus.
-            <br> <br>
-
-                <img src="fig3.jpg" height="225">
-                <img src="fig4.jpg" height="225">
-                <a class="caption"> Fig.3: Craig Foster, <i>My Octopus Teacher</i>, 2020.&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Fig.4: Craig Foster, <i>My Octopus Teacher</i>, 2020.</a>
-  
-             <br> <br>
-            In order to regain his connection to nature, which Foster had lost some time ago, he decides to go free diving every day and document his experience. After some time, he catches a glimpse of this beautiful and mesmerizing octopus. This is when he starts to visit her every day, just out of curiosity.
-            <br> <br>
-            The way he approaches these visits/encounters is something we can learn from. Foster dives without a wetsuit. This is because he believes that you can only get close to the environment when you have no barrier to your surroundings. In this case he means it in a literal sense, but it could mean so much more. When you open yourself up to all possibilities and lose your barrier, that is where communication can start to happen. As Godfrey-Smith phrased it: “Communication is a matter of sending and receiving, speaking and hearing, producing and interpreting — two complementary roles.”<sup>16</sup> This quote implies that communication is not only sending out information but that you also need to listen. Humans have created so many of these barriers – for example through smartphones or headphones and even houses – that we have literally locked ourselves out from the conversation and stopped listening.
-            <br> <br>
-            In order to reenter the conversation, we not only need to get rid of our barrier, but we also need to understand that human language is not the only form of communication. Bridle writes, “in imagining better ways of living with non-humans, computational or biological, we must be attentive to their own ways of speaking and making meaning, and not simply insist that they learn to speak, and think, and behave, in the ways we do.”<sup>17</sup> Essentially, Bridle is saying that humans need to shift their perspective, in order to understand other beings. Perhaps we should learn how to dance like a bee, talk like a whale or sense like a bat.
-            <br> <br>
-            Throughout the documentary Foster tends to assign human emotions and qualities to the octopus. This anthropomorphic view is something that most scientists tend to avoid because it is seen as bad science. As Harari observes in his book Homo Deus: “We shouldn’t humanize animals needlessly, imagine that they are just a furrier version of ourselves. This is not only bad science, but it also prevents us from understanding and valuing other animals on their terms.”<sup>18</sup> Harari is elaborating on the idea that when you give human emotions to more-than-human species you are filling in their world for them, you assign them feelings that they may not have. But could assigning emotions to more-than-human species not also help us?
-            <br> <br>
-            In his book <i>Earth Emotions: New Words for a New World </i>(2019) Australian philosopher and environmental activist Glenn Albrecht claims that in order for humans to feel connected to their family or friends we need to be able to express our positive emotions such as love, care, empathy, admiration and happiness.<sup>19</sup> Does this then also apply to our connection with nature? Do we need some kind of way to express our positive emotions towards them? Maybe new bonds can be formed through emotion. Maybe we should all form an emotional connection to an animal just like Foster did with the octopus.
-            <br> <br>
-            But creating an emotional relationship with something that is unable to return the favor of expressing their emotions, in a way understandable for humans, very quickly becomes unsatisfactory. Foster does create a satisfactory and ultimately meaningful bond with this octopus by assigning human emotions to her. He creates a feeling of returned affection which boosts their relationship. As British biologist and writer Merlin Sheldrake puts it in the book <i>Entangled Life: How Fungi Make our World, Change our Minds, and Shape our Futures</i> (2020): “Scientists are — and have always been — emotional, creative, intuitive, whole human beings, asking questions about a world that was never made to be catalogued and systematized.”<sup>20</sup> Sheldrakes point is that scientists need emotion and creativity in order to try to make sense of the world. So why would science keep all these emotions out? As Albrecht puts it: “Earth emotions are what make us human-in-nature.”<sup>21</sup>
-            <br> <br>
-            Connection to nature is not only about understanding nature but it can also help us understand ourselves. Nature can teach us more about our lives than you may expect and that we even know now. In<i> My Octopus Teacher Foster </i>shows us multiple accounts where he learnt something from the octopus that changed his being:
-            <blockquote>
-            She'd made me realize just how precious wild places are. You go into that water and it's extremely liberating. All your worries and problems and life drama just dissolve. You slowly start to care about all the animals, even the tiniest little animals. You realize that everyone is very important. To sense how vulnerable these wild animals' lives are, and actually, then how vulnerable all our lives on this planet are. My relationship with the sea forest and its creatures deepens week after month after year after year. You're in touch with this wild place, and it's speaking to you its language is visible. I fell in love with her but also with that amazing wildness that she represented and how that changed me. What she taught me was to feel that you’re part of this place, not a visitor. That's a huge difference.<sup>22</sup>
-            </blockquote>
-            Harari suggests that one of the biggest projects on the human agenda will be finding the key to happiness.<sup>23</sup> In our current society happiness is being defined through consumption of goods and indirectly through exploitation of other beings and natural resources, rather than through genuine connection with our environment. The problem with this is that currently being happy is almost impossible. Every time you get to your goal something bigger and better becomes the new goal. There is this endless growth that never seems to stop. But perhaps we have already found the key, we just haven’t used it yet. Maybe the true key to happiness is letting yourself be changed by nature, allowing yourself to learn from them, just like Foster did. Stop having expectations and goals, and just let yourself be guided by your environment. Slow down and let nature amaze you.
-        </p>
-
-        <div class="footnote" id="footnote"></div>
-        <div class="footnote" id="footnote"> 
-            <br><br><br><br>
-            16. Godfrey-Smith, <i>Other Minds</i>, 131.
-            <br>
-            17. Bridle, <i>Ways of Being</i>, 169.
-            <br>
-            18. Harari, <i>Homo Deus</i>, 150.
-            <br>
-            19. Glenn A. Albrecht, <i>Earth Emotions</i> (New York: Cornell University Press, 2019), 3. 
-            <br>
-            20. Merlin Sheldrake, <i>Entangled Life</i> (New York: Random House, 2020), 22. 
-            <br>
-            21. Albrecht, <i>Earth Emotions</i>, 4.
-            <br>
-            22. <i>My Octopus Teacher</i>, directed by James Reed and Pippa Ehrlich (2020; Netflix Original, 2020).
-            <br>
-            23. Harari, <i>Homo Deus</i>, 34.
+        <div class="wrapper5">
+            <div class="left">
+            <p>
+                <h2>Returning to the Soil</h2>
+            
+                Until now I have only written about the human connection with animals but there are of course many more living beings in the more-than-human world, such as algae, plants, bacteria and fungi. The reason I have only talked about animals is because we are animals, which makes it a lot easier to connect with fellow animals, even though we do not speak the same language and may not always understand each other. When you interact with an animal you can read their behavior because it is close to ours, when you interact with algae, plants, bacteria or fungi this is completely different. With animals our actions most often result in immediate consequences. When interacting with algae, plant, bacteria or fungi it can take years until you notice the reaction. But this does not mean that making a connection is impossible. 
+                <br> <br>
+                One of the examples where humans can connect to other more-than-human species is Bob Hendrix’s <i>Living Coffin</i> (2020) (Fig.5). This coffin is made from a mycelium who will help degrade your body after you die. We are so disconnected from nature that even in death humans try to separate themselves from it. We either put ourselves in coffins – made of processed wood – or we cremate ourselves. With this coffin Hendrix aims to put humans back into the cycle of life, by giving them back to the soil.
+                <br> <br>
+    
+                    <img src="fig5.jpg" height="295">
+                    <a class="caption"> Fig.5: Bob Hendrix, <i>Living Coffin</i>, 2020 </a>
+    
+                <br> <br>
+                In Botany of Desire Pollan writes: “Even our grammar makes the terms of this relationship perfectly clear: I choose the plants, I pull the weeds, I harvest crops. We divide the world into subjects and objects, and here in the garden, as nature generally, we humans are the subjects.”<sup>24</sup> Pollan continues: “Our grammar might teach us to divide the world into active subjects and passive objects, but in a coevolutionary relationship every subject is also an object, every object is a subject.”<sup>25</sup> Pollan points out how our grammar teaches humans to see themselves as the subject of this world, but that this is not how the world works. With the Living Coffin Hendrix supports this view. Using this coffin we actively turn ourselves into an object, in order to be able to give back to nature. 
+                <br> <br>
+                You could even see being composted by mycelium as some kind of reincarnation. You become part of a much bigger system in death. As Sheldrake writes: “Without fungal webs no plant would exist anywhere. All life on land, including my own, depended on these networks.”<sup>26</sup> Essentially Sheldrake is saying that human bodies could become part of a system sustaining all life on earth. We could turn from being the polluters of the earth to becoming the sustainers of all life. Even in our death we would be able to continue connecting to natural world. Perhaps you could even finally understand what the trees are talking about. Or even feel what it is to be a tree.
+                <br><br>
+            </p>
+            </div>
+            <dif class="right">
+              <div class="right-inner">
+                24. Pollan, <i>Botany of Desire</i>, xii.
+                <br>
+                25. Bridle, Pollan, <i>Botany of Desire</i>, xx.
+                <br>
+                26. Sheldrake, <i>Entangled Life</i>, 2.      
+              </div>       
+            </dif>
         </div>
-
-        <p>
-            <br>
-            <h2>Returning to the Soil</h2>
-        
-            Until now I have only written about the human connection with animals but there are of course many more living beings in the more-than-human world, such as algae, plants, bacteria and fungi. The reason I have only talked about animals is because we are animals, which makes it a lot easier to connect with fellow animals, even though we do not speak the same language and may not always understand each other. When you interact with an animal you can read their behavior because it is close to ours, when you interact with algae, plants, bacteria or fungi this is completely different. With animals our actions most often result in immediate consequences. When interacting with algae, plant, bacteria or fungi it can take years until you notice the reaction. But this does not mean that making a connection is impossible. 
-            <br> <br>
-            One of the examples where humans can connect to other more-than-human species is Bob Hendrix’s <i>Living Coffin</i> (2020) (Fig.5). This coffin is made from a mycelium who will help degrade your body after you die. We are so disconnected from nature that even in death humans try to separate themselves from it. We either put ourselves in coffins – made of processed wood – or we cremate ourselves. With this coffin Hendrix aims to put humans back into the cycle of life, by giving them back to the soil.
-            <br> <br>
-
-                <img src="fig5.jpg" height="295">
-                <a class="caption"> Fig.5: Bob Hendrix, <i>Living Coffin</i>, 2020 </a>
-
-            <br> <br>
-            In Botany of Desire Pollan writes: “Even our grammar makes the terms of this relationship perfectly clear: I choose the plants, I pull the weeds, I harvest crops. We divide the world into subjects and objects, and here in the garden, as nature generally, we humans are the subjects.”<sup>24</sup> Pollan continues: “Our grammar might teach us to divide the world into active subjects and passive objects, but in a coevolutionary relationship every subject is also an object, every object is a subject.”<sup>25</sup> Pollan points out how our grammar teaches humans to see themselves as the subject of this world, but that this is not how the world works. With the Living Coffin Hendrix supports this view. Using this coffin we actively turn ourselves into an object, in order to be able to give back to nature. 
-            <br> <br>
-            You could even see being composted by mycelium as some kind of reincarnation. You become part of a much bigger system in death. As Sheldrake writes: “Without fungal webs no plant would exist anywhere. All life on land, including my own, depended on these networks.”<sup>26</sup> Essentially Sheldrake is saying that human bodies could become part of a system sustaining all life on earth. We could turn from being the polluters of the earth to becoming the sustainers of all life. Even in our death we would be able to continue connecting to natural world. Perhaps you could even finally understand what the trees are talking about. Or even feel what it is to be a tree.
-        
-        </p>
-
-        <div class="footnote" id="footnote"></div>
-        <div class="footnote" id="footnote">
-            <br><br><br><br><br>
-            24. Pollan, <i>Botany of Desire</i>, xii.
-            <br>
-            25. Bridle, Pollan, <i>Botany of Desire</i>, xx.
-            <br>
-            26. Sheldrake, <i>Entangled Life</i>, 2.
+        <div class="wrapper6">
+            <div class="left">
+            <p>
+                <h2>Conclusion</h2>
+            
+                Blurring the line between the “human” and natural world can take many different forms. But one thing that is clear is that we need a new way of seeing the world around us, the system that we are part of – whether we want to or not. We need to get rid of the barrier that we have created towards the natural world. This way we can finally slow down and start giving back to the natural world. And maybe, in the end, we could even build a meaningful emotional relationship with our environment.
+                <br> <br>
+                Thwaites, Foster and Hendrix already made a start, but we are still far away from the finish line. None of these examples are perfect and will probably not sustain in the long run, but we can learn so much from them. This journey will not be an easy one. But it is an important one, and one we cannot do on our own. We need to stay open to the conversation just like Thwaites, Foster and Hendrix did in their process. We need to realize we cannot know everything and that making mistakes is part of the process. There is no way you can do everything right the first time around. So stop overthinking every move and just dive in. Who knows where it will take us.
+                <br> <br>
+                And maybe there will never be a finish line. But that doesn’t mean that it is not worth contributing to this process. As Harari puts it: “Climbing mount Everest is more satisfying than standing at the top; flirting and foreplay are more exciting than having an orgasm; and conducting groundbreaking lab experiments is more interesting than receiving praise and prizes.”<sup>27</sup> Harari’s point is that in most cases the process is more fulfilling than the actual result. Because the world is constantly evolving there will most likely never be a final result, but I believe that this is one of these cases where the process will be more fulfilling than the end result.
+                <br> <br>
+                Even though in our lifetime, we will probably never be able to fully get rid the line that we have created between the “human” and natural world. But I hope it will continue to fade.
+            </p>
+            </div>
+            <dif class="right">
+              <div class="right-inner">
+                27. Harari, <i>Homo Deus</i>, 43.     
+              </div>       
+            </dif>
         </div>
-
-        <p>
-            <br>
-            <h2>Conclusion</h2>
-        
-            Blurring the line between the “human” and natural world can take many different forms. But one thing that is clear is that we need a new way of seeing the world around us, the system that we are part of – whether we want to or not. We need to get rid of the barrier that we have created towards the natural world. This way we can finally slow down and start giving back to the natural world. And maybe, in the end, we could even build a meaningful emotional relationship with our environment.
-            <br> <br>
-            Thwaites, Foster and Hendrix already made a start, but we are still far away from the finish line. None of these examples are perfect and will probably not sustain in the long run, but we can learn so much from them. This journey will not be an easy one. But it is an important one, and one we cannot do on our own. We need to stay open to the conversation just like Thwaites, Foster and Hendrix did in their process. We need to realize we cannot know everything and that making mistakes is part of the process. There is no way you can do everything right the first time around. So stop overthinking every move and just dive in. Who knows where it will take us.
-            <br> <br>
-            And maybe there will never be a finish line. But that doesn’t mean that it is not worth contributing to this process. As Harari puts it: “Climbing mount Everest is more satisfying than standing at the top; flirting and foreplay are more exciting than having an orgasm; and conducting groundbreaking lab experiments is more interesting than receiving praise and prizes.”<sup>27</sup> Harari’s point is that in most cases the process is more fulfilling than the actual result. Because the world is constantly evolving there will most likely never be a final result, but I believe that this is one of these cases where the process will be more fulfilling than the end result.
-            <br> <br>
-            Even though in our lifetime, we will probably never be able to fully get rid the line that we have created between the “human” and natural world. But I hope it will continue to fade.
-        </p>
-
-        <div class="footnote" id="footnote"></div>
-        <div class="footnote" id="footnote"> 
-            <br><br><br><br><br><br><br>
-            27. Harari, <i>Homo Deus</i>, 43.
-        </div>
-
         <p>
             <br><br><br><br><br><br>
             <h2>Bibliography</h2>
@@ -335,54 +486,18 @@
             Thwaites, Thomas. <i>GoatMan.</i> New York: Princeton Architectural Press, 2016.
             <br><br>
             Wulf, Andrea. <i>Invention of Nature.</i> New York: Vintage Books, 2016.
-                </p>
+            </p>
 
-
-        
-        
-        
-    </div>
-    <div class="overlay"></div>
-</div>
-
+            <div class="overlay"></div>
+      </div>
 
 <script>
-
-    window.addEventListener('scroll', function() {
+     window.addEventListener('scroll', function() {
         var scrollPosition = window.scrollY;
         var maxScroll = document.body.scrollHeight - window.innerHeight;
         var blurValue = 30 * (scrollPosition / maxScroll); // Adjust blur intensity
         document.querySelector('.overlay').style.filter = 'blur(' + blurValue + 'px)';
     });
-
-     
-
-    // Get the text container
-    const textContainer = document.getElementById('text');
-
-    // Get all paragraphs in the text container
-    const paragraphs = textContainer.querySelectorAll('p');
-
-    // Get all footnotes
-    const footnotes = document.querySelectorAll('.footnote');
-
-    // Loop through paragraphs and footnotes to align them
-    paragraphs.forEach((paragraph, index) => {
-        // Get the position of the paragraph
-        const paragraphPosition = paragraph.getBoundingClientRect();
-
-        // Get the footnote corresponding to this paragraph
-        const footnote = footnotes[index];
-
-        // Calculate the top position of the footnote based on the paragraph position
-        const footnoteTop = paragraphPosition.top + window.pageYOffset;
-
-        // Set the top position of the footnote
-        footnote.style.top = `${footnoteTop}px`;
-    });
-
-
-
 </script>
 
 </body>
