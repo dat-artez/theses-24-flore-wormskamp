@@ -5,8 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sticky Footnotes</title>
-    <style>
+<style>
     
+    @font-face {
+        font-family: TextFont;
+        src: url(Roboto-Light.ttf);
+    }
+
     @font-face {
         font-family: TitleFont;
         src: url(font_thesis.otf);
@@ -14,13 +19,13 @@
 
     @font-face {
         font-family: ItalicTextFont;
-        src: url(HelveticaNeue-LightItalic.ttf);
+        src: url(Roboto-LightItalic.ttf);
     }
     
     body {
-        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;;
+        font-family: TextFont;
     }
-
+  
     i {
         font-family: ItalicTextFont;
     }
@@ -52,11 +57,12 @@
         letter-spacing: 10px;
     }
 
-    .caption {
+    figcaption {
         font-size: 10px;
+        margin-bottom: -30px;
     }
 
-    /* .overlay {
+    .overlay {
         position: fixed;
         top: 0;
         left: 0;
@@ -68,18 +74,30 @@
         filter: blur(1px); 
         z-index: -1; 
         transition: filter 0.5s; 
-    } */
+    }
+
+    .column {
+        float: left;
+        width: 48%;
+        padding: 5px;
+    }
+
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
     
 .wrapper1 {
         display: flex;
         z-index: 1;
 
         .left {
-        width: 65%;
+        width: 60%;
         }
 
         .right {
-        width: 35%;
+        width: 40%;
         display: flex;
         flex-direction: column;
         padding: 0 20px;
@@ -98,11 +116,11 @@
         z-index: 1;
 
         .left {
-        width: 65%;
+        width: 60%;
         }
 
         .right {
-        width: 35%;
+        width: 40%;
         display: flex;
         flex-direction: column;
         padding: 0 20px;
@@ -121,11 +139,11 @@
         z-index: 1;
 
         .left {
-        width: 65%;
+        width: 60%;
         }
 
         .right {
-        width: 35%;
+        width: 40%;
         display: flex;
         flex-direction: column;
         padding: 0 20px;
@@ -144,11 +162,11 @@
         z-index: 1;
 
         .left {
-        width: 65%;
+        width: 60%;
         }
 
         .right {
-        width: 35%;
+        width: 40%;
         display: flex;
         flex-direction: column;
         padding: 0 20px;
@@ -167,11 +185,11 @@
         z-index: 1;
 
         .left {
-        width: 65%;
+        width: 60%;
         }
 
         .right {
-        width: 35%;
+        width: 40%;
         display: flex;
         flex-direction: column;
         padding: 0 20px;
@@ -190,11 +208,34 @@
         z-index: 1;
 
         .left {
-        width: 65%;
+        width: 60%;
         }
 
         .right {
-        width: 35%;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px;
+        font-size: 10px;
+
+        .right-inner {
+        position: sticky;
+        top: 0;
+        padding: 20px;
+    }
+  }
+}
+
+.wrapper7 {
+        display: flex;
+        z-index: 1;
+
+        .left {
+        width: 99%;
+        }
+
+        .right {
+        width: 1%;
         display: flex;
         flex-direction: column;
         padding: 0 20px;
@@ -209,8 +250,8 @@
 }
 
 .container {
-    margin-left: 25%;
-    width: 75%;
+    margin-left: 30%;
+    width: 70%;
     display: flex;
     flex-direction: column;
 
@@ -218,13 +259,14 @@
     line-height: 1.6;
 
   .header {
-    padding: 20px 20px;
+    padding: 0px 20px;
     text-align: right;
     z-index: 1;
-    margin-right: 35%;
+    margin-right: 40%;
   }
 }
-    </style>
+
+</style>
 </head>
 <body>
     <div class="container">
@@ -307,10 +349,17 @@
                 <br> <br>
                 In this work Thwaites aspires to become a goat to escape the worry and existential pain of being human.<sup>8</sup> By researching every aspect of a goat – not only its body but also the soul and mind – he aspires to become a goat in every sense of its being. The ultimate goal of this work is not to look exactly like a goat but rather to answer the question of whether life can be more fulfilling if you are a goat instead of a human.
                 <br> <br>
-    
-                    <img src="fig1.jpg" height="260">
-                    <img src="fig2.png" height="260">
-                    <a class="caption"> Fig.2: Thomas Thwaites, <i>GoatMan</i>, 2016.&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Fig.2: Thomas Thwaites, <i>GoatMan</i>, 2016.</a>
+
+                <div class="row">
+                  <div class="column">
+                    <img src="fig1.png" style="width:100%">
+                    <figcaption>Fig.1: Thomas Thwaites, <i>GoatMan</i>, 2016.</figcaption>
+                  </div>
+                  <div class="column">
+                    <img src="fig2.png" alt="Forest" style="width:100%">
+                    <figcaption>Fig.2: Thomas Thwaites, <i>GoatMan</i>, 2016.</figcaption>
+                  </div>
+                </div>
             
                 <br> <br>
                 By looking at this work (Fig. 1 and Fig. 2) it is immediately clear that Thwaites doesn’t belong in the herd. Maybe if you stand very far away and squint your eyes the designer can be mistaken for a goat. But otherwise, he simply looks just like a human wearing some prosthetics. You can ask yourself if looking like a goat is that important in order to feel what it is like to be a goat, after all, you cannot really see yourself. All we can see is the documentation of the project. In a way, this work is perhaps more performance art, but one which must be experienced as a performer instead of as an audience.
@@ -358,11 +407,18 @@
             
                 There are also more accessible ways to reconnect to nature. There is no need to dress up like a goat every time you want to feel closer to nature. One more accessible way is seen in the documentary<i> My Octopus Teacher </i>(2020) (Fig. 3 and Fig. 4), where South African documentary maker and naturalist Craig Foster establishes a special friendship with an octopus.
                 <br> <br>
-    
-                    <img src="fig3.jpg" height="225">
-                    <img src="fig4.jpg" height="225">
-                    <a class="caption"> Fig.3: Craig Foster, <i>My Octopus Teacher</i>, 2020.&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Fig.4: Craig Foster, <i>My Octopus Teacher</i>, 2020.</a>
-        
+
+                <div class="row">
+                  <div class="column">
+                    <img src="fig3.png" style="width:100%">
+                    <figcaption>Fig.3: Craig Foster, <i>My Octopus Teacher</i>, 2020.</figcaption>
+                  </div>
+                  <div class="column">
+                    <img src="fig4.png" alt="Forest" style="width:100%">
+                    <figcaption>Fig.4: Craig Foster, <i>My Octopus Teacher</i>, 2020.</figcaption>
+                  </div>
+                </div>
+             
                  <br> <br>
                 In order to regain his connection to nature, which Foster had lost some time ago, he decides to go free diving every day and document his experience. After some time, he catches a glimpse of this beautiful and mesmerizing octopus. This is when he starts to visit her every day, just out of curiosity.
                 <br> <br>
@@ -414,8 +470,8 @@
                 One of the examples where humans can connect to other more-than-human species is Bob Hendrix’s <i>Living Coffin</i> (2020) (Fig.5). This coffin is made from a mycelium who will help degrade your body after you die. We are so disconnected from nature that even in death humans try to separate themselves from it. We either put ourselves in coffins – made of processed wood – or we cremate ourselves. With this coffin Hendrix aims to put humans back into the cycle of life, by giving them back to the soil.
                 <br> <br>
     
-                    <img src="fig5.jpg" height="295">
-                    <a class="caption"> Fig.5: Bob Hendrix, <i>Living Coffin</i>, 2020 </a>
+                    <img src="fig5.png" width="100%">
+                    <figcaption>Fig.5: Bob Hendrix, <i>Living Coffin</i>, 2020.</figcaption>
     
                 <br> <br>
                 In Botany of Desire Pollan writes: “Even our grammar makes the terms of this relationship perfectly clear: I choose the plants, I pull the weeds, I harvest crops. We divide the world into subjects and objects, and here in the garden, as nature generally, we humans are the subjects.”<sup>24</sup> Pollan continues: “Our grammar might teach us to divide the world into active subjects and passive objects, but in a coevolutionary relationship every subject is also an object, every object is a subject.”<sup>25</sup> Pollan points out how our grammar teaches humans to see themselves as the subject of this world, but that this is not how the world works. With the Living Coffin Hendrix supports this view. Using this coffin we actively turn ourselves into an object, in order to be able to give back to nature. 
@@ -454,43 +510,51 @@
               </div>       
             </dif>
         </div>
-        <p>
+        <div class="wrapper7">
+          <div class="left">
+          <p>
             <br><br><br><br><br><br>
             <h2>Bibliography</h2>
         
-            Albrecht, Glenn A. <i>Earth Emotions</i>. New York: Cornell University Press, 2019.
+            Albrecht, Glenn. <i>Earth Emotions.</i> New York: Cornell University Press, 2019.
             <br><br>
-            Bridle, James. <i>Ways of Being</i>. London: Pinguin Random House UK, 2022.
+            Bridle, James. <i>Ways of Being.</i> London: Pinguin Random House UK, 2022.
             <br><br>
             Chiang, Ted and Allora & Calzadilla. “The Great Silence”. e-flux journal SUPERCOMMUNITY, #65 (2015).
             <br><br>
             Danowski, Déborah and Eduardo Viveiros de Castro. “Is There Any World to Come?” e-flux journal SUPERCOMMUNITY, #65 (2015).
             <br><br>
-            Gee, Henry.<i> A (Very) Short History of Life on Earth. </i>London: Picador, 2021.
+            Gee, Henry. <i>A (Very) Short History of Life on Earth.</i> London: Picador, 2021.
             <br><br>
-            Godfrey-Smith, Peter. <i>Other Minds. </i>London: William Collins, 2017.
+            Godfrey-Smith, Peter. <i>Other Minds.</i> London: William Collins, 2017.
             <br><br>
-            Harari, Yuval Noah.<i> Homo Deus.</i> London: Vintage, 2017.
+            Harari, Yuval Noah. <i>Homo Deus.</i> London: Vintage, 2017.
             <br><br>
             Haraway, Donna. <i>Staying with the Trouble.</i> Durham: Duke University Press, 2016.
             <br><br>
-            Morton, Timothy. <i>Humankind. </i>London: Verso Books, 2019.
+            Morton, Timothy. <i>Humankind.</i> London: Verso Books, 2019.
             <br><br>
-            Pell, Rich. <i>This Is Not an Artifact. </i>Berlin: K. Verlag, 2023.
+            Pell, Rich. <i>This Is Not an Artifact.</i> Berlin: K. Verlag, 2023.
             <br><br>
             Pollan, Michael. <i>Botany of Desire.</i> New York: Random House, 2002.
             <br><br>
             Reed, James and Pippa Ehrlich, dir. <i>My Octopus Teacher.</i> 2020; Netflix Original, 2020. https://www.netflix.com/watch/81045007?source=35.
             <br><br>
-            Sheldrake, Merlin.<i> Entangled Life.</i> New York: Random House, 2020.
+            Sheldrake, Merlin. <i>Entangled Life.</i> New York: Random House, 2020.
             <br><br>
             Thwaites, Thomas. <i>GoatMan.</i> New York: Princeton Architectural Press, 2016.
             <br><br>
             Wulf, Andrea. <i>Invention of Nature.</i> New York: Vintage Books, 2016.
-            </p>
-
-            <div class="overlay"></div>
-      </div>
+            <br><br><br>
+          </p>  
+          </div>
+          <dif class="right">
+            <div class="right-inner">   
+            </div>       
+          </dif>
+        </div> 
+      <div class="overlay"></div>
+    </div>
 
 <script>
      window.addEventListener('scroll', function() {
